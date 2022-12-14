@@ -8,7 +8,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="4dp"
@@ -28,7 +28,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="@string/detail_name"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -36,46 +36,25 @@
                     app:layout_constraintTop_toTopOf="@+id/img_detail_user" />
 
                 <TextView
-                    android:id="@+id/tv_detail_followers"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/followers"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_name"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_name" />
-
-                <TextView
-                    android:id="@+id/text_followers"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:text="@string/followers"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_detail_followers"
-                    app:layout_constraintEnd_toEndOf="@+id/tv_detail_name"
-                    app:layout_constraintStart_toEndOf="@+id/tv_detail_followers"
-                    app:layout_constraintTop_toTopOf="@+id/tv_detail_followers" />
-
-                <TextView
                     android:id="@+id/tv_detail_following"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/following"
+                    android:text="Lama"
                     android:textSize="16sp"
+                    android:layout_marginTop="16dp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_followers"
-                    app:layout_constraintTop_toBottomOf="@+id/text_followers" />
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_name"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/text_following"
                     android:layout_width="0dp"
+                    android:layout_marginStart="8dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
                     android:text="@string/following"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_detail_following"
-                    app:layout_constraintEnd_toEndOf="@+id/text_followers"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_detail_name"
                     app:layout_constraintStart_toEndOf="@+id/tv_detail_following"
                     app:layout_constraintTop_toTopOf="@+id/tv_detail_following" />
 
@@ -84,43 +63,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="@string/text_location"
+                    android:text="Sulit"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="@+id/text_following"
                     app:layout_constraintStart_toStartOf="@+id/tv_detail_following"
                     app:layout_constraintTop_toBottomOf="@+id/tv_detail_following" />
-
-                <View
-                    android:id="@+id/diver_1"
-                    style="@style/Divider.Horizontal"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_location" />
-
-                <TextView
-                    android:id="@+id/text_company"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/company"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/diver_1"
-                    app:layout_constraintTop_toBottomOf="@+id/diver_1" />
-
-                <TextView
-                    android:id="@+id/tv_detail_company"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="textEnd"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:text="@string/company"
-                    app:layout_constraintBottom_toBottomOf="@+id/text_company"
-                    app:layout_constraintEnd_toEndOf="@+id/diver_1"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/text_company"
-                    app:layout_constraintTop_toTopOf="@+id/text_company" />
 
                 <View
                     android:id="@+id/diver_2"
@@ -128,14 +75,14 @@
                     android:layout_marginTop="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_company" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_location" />
 
                 <TextView
                     android:id="@+id/text_repositories"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="@string/repositories"
+                    android:text="Description"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/diver_2"
                     app:layout_constraintTop_toBottomOf="@+id/diver_2" />
@@ -144,14 +91,14 @@
                     android:id="@+id/tv_detail_repository"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    android:layout_gravity="center_vertical|end"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:text="@string/repositories"
-                    app:layout_constraintBottom_toBottomOf="@+id/text_repositories"
-                    app:layout_constraintEnd_toEndOf="@+id/diver_2"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/text_repositories"
-                    app:layout_constraintTop_toTopOf="@+id/text_repositories" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_repositories" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

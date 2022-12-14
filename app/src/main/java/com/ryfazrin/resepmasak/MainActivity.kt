@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var rvUser: RecyclerView
-    private val list = ArrayList<User>()
+    private val list = ArrayList<Resep>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,30 +22,24 @@ class MainActivity : AppCompatActivity() {
         showRecyclerList()
     }
 
-    private val listUser: ArrayList<User>
+    private val listUser: ArrayList<Resep>
         get() {
-            val dataName = resources.getStringArray(R.array.name)
-            val dataUsername = resources.getStringArray(R.array.username)
-            val dataLocation = resources.getStringArray(R.array.location)
+            val dataResepTitle = resources.getStringArray(R.array.resep_title)
+            val dataTimes = resources.getStringArray(R.array.times)
+            val dataDifficulty = resources.getStringArray(R.array.difficulty)
             val dataAvatar = resources.obtainTypedArray(R.array.avatar)
-            val dataRepository = resources.getStringArray(R.array.repository)
-            val dataCompany = resources.getStringArray(R.array.company)
-            val dataFollowers = resources.getStringArray(R.array.followers)
-            val dataFollowing = resources.getStringArray(R.array.following)
+            val dataDescription = resources.getStringArray(R.array.description)
 
-            val listUser = ArrayList<User>()
-            for (i in dataName.indices) {
-                val user = User(
-                    name = dataName[i],
-                    username = dataUsername[i],
-                    location = dataLocation[i],
+            val listUser = ArrayList<Resep>()
+            for (i in dataResepTitle.indices) {
+                val resep = Resep(
+                    resep_title = dataResepTitle[i],
+                    times = dataTimes[i],
+                    difficulty = dataDifficulty[i],
                     avatar = dataAvatar.getResourceId(i, -1),
-                    repository = dataRepository[i],
-                    company = dataCompany[i],
-                    followers = dataFollowers[i],
-                    following = dataFollowing[i]
+                    description = dataDescription[i]
                 )
-                listUser.add(user)
+                listUser.add(resep)
             }
             return listUser
         }
@@ -56,13 +50,13 @@ class MainActivity : AppCompatActivity() {
         rvUser.adapter = listUserAdapter
 
         listUserAdapter.setOnItemClickCallback(object : ListUserAdapter.OnItemCLickCallback {
-            override fun onItemClicked(data: User) {
+            override fun onItemClicked(data: Resep) {
                 showSelectedUser(data)
             }
         })
     }
 
-    private fun showSelectedUser(user: User) {
+    private fun showSelectedUser(user: Resep) {
         val moveDetailIntent = Intent(this@MainActivity, DetailUserActivity::class.java)
         moveDetailIntent.putExtra(DetailUserActivity.EXTRA_USER, user)
         startActivity(moveDetailIntent)

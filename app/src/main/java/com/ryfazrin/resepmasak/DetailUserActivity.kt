@@ -12,7 +12,7 @@ import java.text.DecimalFormat
 
 class DetailUserActivity : AppCompatActivity() {
 
-    private lateinit var user: User
+    private lateinit var user: Resep
 
     companion object {
         const val EXTRA_USER = "extra_user"
@@ -25,61 +25,26 @@ class DetailUserActivity : AppCompatActivity() {
 
         val imgUser: ImageView = findViewById(R.id.img_detail_user)
         val tvName: TextView = findViewById(R.id.tv_detail_name)
-        val tvFollowers: TextView = findViewById(R.id.tv_detail_followers)
-        val tvFollowing: TextView = findViewById(R.id.tv_detail_following)
+        val tvFollowing: TextView = findViewById(R.id.text_following)
         val tvLocation: TextView = findViewById(R.id.tv_detail_location)
-        val tvCompany: TextView = findViewById(R.id.tv_detail_company)
         val tvRepository: TextView = findViewById(R.id.tv_detail_repository)
 
-        user = intent.getParcelableExtra<User>(EXTRA_USER) as User
+        user = intent.getParcelableExtra<Resep>(EXTRA_USER) as Resep
 
-        supportActionBar?.title = user.username
+        supportActionBar?.title = user.resep_title
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         Glide.with(this)
             .load(user.avatar)
             .into(imgUser)
-        tvName.text = user.name
-        tvFollowers.text = countViews(user.followers.toLong())
-        tvFollowing.text = countViews(user.following.toLong())
-        tvLocation.text = user.location
-        tvCompany.text = user.company
-        tvRepository.text = user.repository
+        tvName.text = user.resep_title
+        tvFollowing.text = user.times
+        tvLocation.text = user.difficulty
+        tvRepository.text = user.description
     }
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_detail, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            R.id.share -> {
-                val sendData = "Github User's\n\nName: ${user.name}\n\nUsername: ${user.username}\n\nCompany: ${user.company}"
-
-                val intent = Intent()
-                intent.action = Intent.ACTION_SEND
-                intent.putExtra(Intent.EXTRA_TEXT, sendData)
-                intent.type="text/plain"
-                startActivity(Intent.createChooser(intent,"Share ${user.username} Github Profile :"))
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    private fun countViews(count:Long): String{
-        val array = arrayOf(' ', 'k', 'M', 'B', 'T', 'P', 'E')
-        val value = Math.floor(Math.log10(count.toDouble())).toInt()
-        val base = value / 3
-        if (value >= 3 && base < array.size) {
-            return DecimalFormat("#0.0").format(count/ Math.pow(10.0, (base * 3).toDouble())) + array[base]
-        } else {
-            return DecimalFormat("#,##0").format(count)
-        }
     }
 }

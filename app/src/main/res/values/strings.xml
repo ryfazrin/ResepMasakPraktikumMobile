@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Resep Masak</string>
-    <string name="github_name">Github Name</string>
-    <string name="github_username">Github username</string>
-    <string name="user_location">User Location</string>
+    <string name="app_name">Ide Masak</string>
+    <string name="text_resep">Nama Resep</string>
+    <string name="text_times">0Jam 30mnt</string>
+    <string name="text_difficulty">Tingkatan</string>
     <string name="share">share</string>
     <string name="detail_name">Detail Name</string>
     <string name="followers">Followers</string>
@@ -11,107 +11,43 @@
     <string name="company">Company</string>
     <string name="repositories">Repositories</string>
 
-    <string-array name="username">
-        <item>JakeWharton</item>
-        <item>amitshekhariitbhu</item>
-        <item>romainguy</item>
-        <item>chrisbanes</item>
-        <item>tipsy</item>
-        <item>ravi8x</item>
-        <item>jasoet</item>
-        <item>budioktaviyan</item>
-        <item>hendisantika</item>
-        <item>sidiqpermana</item>
+    <string-array name="resep_title">
+        <item>Sayur Lodeh Iga Sapi, Menu Rumahan Lebih Istimewa</item>
+        <item>Ikan Dori Salted Egg, Sajian Kekinian yang Mudah Dibuat</item>
+        <item>Roti Cane Sundae, Sebuah Twist Seru untuk Hidangan Dessert</item>
+        <item>Satai Pentul Kambing, Sambut Idul Adha dengan yang Terbaik</item>
+        <item>Nasi Goreng Pedas, Lengkap dengan Topping yang Menggugah Selera</item>
     </string-array>
 
-    <string-array name="name">
-        <item>Jake Wharton</item>
-        <item>Amit Shekhar</item>
-        <item>Romain Guy</item>
-        <item>Chris Banes</item>
-        <item>David</item>
-        <item>Ravi Tamada</item>
-        <item>Deny Prasetyo</item>
-        <item>Budi Oktaviyan</item>
-        <item>Hendi Santika</item>
-        <item>Sidiq Permana</item>
+    <string-array name="times">
+        <item>1jam 30mnt</item>
+        <item>1jam</item>
+        <item>30mnt</item>
+        <item>1jam</item>
+        <item>30mnt</item>
     </string-array>
 
-    <string-array name="location">
-        <item>Pittsburgh, PA, USA</item>
-        <item>New Delhi, India</item>
-        <item>California</item>
-        <item>Sydney, Australia</item>
-        <item>Trondheim, Norway</item>
-        <item>India</item>
-        <item>Kotagede, Yogyakarta, Indonesia</item>
-        <item>Jakarta, Indonesia</item>
-        <item>Bojongsoang - Bandung Jawa Barat</item>
-        <item>Jakarta Indonesia</item>
+    <string-array name="difficulty">
+        <item>Cukup Rumit</item>
+        <item>Mudah</item>
+        <item>Mudah</item>
+        <item>Mudah</item>
+        <item>Mudah</item>
     </string-array>
 
     <integer-array name="avatar">
-        <item>@drawable/user1</item>
-        <item>@drawable/user2</item>
-        <item>@drawable/user3</item>
-        <item>@drawable/user4</item>
-        <item>@drawable/user5</item>
-        <item>@drawable/user6</item>
-        <item>@drawable/user7</item>
-        <item>@drawable/user8</item>
-        <item>@drawable/user9</item>
-        <item>@drawable/user10</item>
+        <item>@drawable/resep1</item>
+        <item>@drawable/resep2</item>
+        <item>@drawable/resep3</item>
+        <item>@drawable/resep4</item>
+        <item>@drawable/resep5</item>
     </integer-array>
 
-    <string-array name="repository">
-        <item>102</item>
-        <item>37</item>
-        <item>9</item>
-        <item>30</item>
-        <item>56</item>
-        <item>28</item>
-        <item>44</item>
-        <item>110</item>
-        <item>1064</item>
-        <item>65</item>
-    </string-array>
-
-    <string-array name="company">
-        <item>Google, Inc.</item>
-        <item>MindOrksOpenSource</item>
-        <item>Google</item>
-        <item>Google working on @android</item>
-        <item>Working Group Two</item>
-        <item>AndroidHive | Droid5</item>
-        <item>gojek-engineering</item>
-        <item>KotlinID</item>
-        <item>JVMDeveloperID @KotlinID @IDDevOps</item>
-        <item>Nusantara Beta Studio</item>
-    </string-array>
-
-    <string-array name="followers">
-        <item>56995</item>
-        <item>5153</item>
-        <item>7972</item>
-        <item>14725</item>
-        <item>788</item>
-        <item>18628</item>
-        <item>277</item>
-        <item>178</item>
-        <item>428</item>
-        <item>465</item>
-    </string-array>
-
-    <string-array name="following">
-        <item>12</item>
-        <item>2</item>
-        <item>0</item>
-        <item>1</item>
-        <item>0</item>
-        <item>3</item>
-        <item>39</item>
-        <item>23</item>
-        <item>61</item>
-        <item>10</item>
+    <string-array name="description">
+        <item>Sayur lodeh, inilah dia resep rumahan yang jarang hadir di menu-menu restoran. Hmmm.. Membuatmu jadi berpikir, bukan? Sayur yang sebetulnya cukup serupa isinya dengan sayur asem ini ternyata hampir tidak pernah ada di menu restoran biasa bahkan restoran papan atas.Padahal dari segi rasa dan penampilan, sayur yang satu ini layak sekali mendapatkan spotlight lebih banyak. Terlebih ketika Chef juga pernah menemukan sekali-sekalinya satu resep keren yang memadukan ikan salmon dengan sayur lodeh dalam tampilan modernis. Nah, tapi untuk kali ini, kita akan membuat sayur lodeh rumahan yang versinya lebih mewah karena adanya kehadiran daging iga sapi.Maka yang perlu dilakukan selain dari membuat sayur lodeh seperti biasanya adalah merebus dulu daging iga sapi hingga empuk. Soal kuah juga nanti akan kita padukan dengan Royco Kaldu Sapi agar rasanya tersesuaikan dengan baik. Selebihnya, tinggal rebus dengan sayur mayurnya dan nantikan hingga matang.Kalau begitu, mari kita sama-sama berbelanja berbagai kebutuhannya dan segera bersiap untuk memasak hari ini. Sajikan yang istimewa untuk keluarga istimewa saat makan malam nanti tiba. Ingin mencoba versi lainnya? Bisa juga lain waktu memasak sayur asem khas Jawa ataupun sayur asem versi spesial untuk berbuka puasa dari resep yang ada di Masak Apa Hari Ini.</item>
+        <item>Pastinya sudah tidak asing dengan beragam hidangan kekinian yang menggunakan salted egg, bukan? Berbagai jenis protein seakan cocok dipadukan dengan saus bercita rasa khas ini. Ikan dori salted egg jadi fokusku kali ini untuk dibagikan cara masaknya, khusus untuk teman-teman semua!Begitu mudah mencari ikan dori sekarang ini. Selebihnya, kamu hanya perlu menggorengnya dengan salutan tepung. Gunakan paduan tepung terigu serta tepung panir untuk tekstur lebih renyah. Setelah digoreng, siapkan saus telur asinnya. Tumis bawang putih, cabai rawit, dan masukkan margarin. Setelah merata, gunakan bumbu Royco Ayam Saus Telur Asin. Ya, sesimpel itu!Terakhir, matikan api dan aduk rata bersama ikan dori yang telah digoreng. Sajikan selagi hangat bersama nasi hangat. Dijamin deh akhir pekan kamu bersama keluarga tidak hanya lezat, tapi juga sarat dengan aksen kekinian!Setelah mengetahui esensi membuat salted egg dan bagaimana mengaplikasikannya pada makanan, maka horizon baru akan terbuka. Aku jadinya menyadari kalau begitu banyak kombinasi lainnya yang bisa kita padukan dengan saus legendaris ini. Kalau yang saat ini paling populer adalah nasi dengan ikan dori ataupun ayam salted egg, maka mengapa tidak mencoba yang lainnya?Nah, simak deh makanan rumahan lainnya yang bisa kamu coba ulik!Siapkan filet ikan kakap segar, bumbui dengan Royco Kaldu Ayam. Celupkan ikan ke dalam pelapis berupa telur ayam, baluri dengan tepung, terakhir lapisi dengan tepung panir. Ulangi proses ini dua kali agar tepung panir melekat sempurna dan hasilnya renyah.Goreng ikan dengan api sedang agar matang secara merata. Saat menggoreng, sebaiknya kamu tidak sering membolak-balikkannya agar tepung tetap melekat dengan baik. Usai menggoreng ikan, lanjutkan dengan menumis saus telur asin.Berikut resep lengkap kakap goreng telur asin.Jadikan saus telur asin sebagai isian unik untuk risoles. Rasanya yang unik namun familiar tetap akan mengejutkan siapapun yang menikmatinya. Dengan adanya isian ayam telur asin yang kekinian ini, camilan yang telah lama kita kenal punya twist baru! Untuk kulitnya, kamu bisa coba beberapa langkah cara membuat risoles yang mudah.Simak resep lengkap risoles telur asin.Tidak hanya untuk masakan gurih, telur asin juga bisa dipakai untuk hidangan penutup. Chocolate molten cake adalah contoh paripurna. Dikenal juga sebagai chocolate fondant, sajian pencuci mulut klasik ini kita beri twist dengan isian telur asin.Caranya cukup mudah, namun perhatikan waktu mengukusnya. Tujuannya adalah agar isiannya tetap leleh, sehingga batasi sekitar delapan menit saja untuk prosesnya. Sajikan bersama potongan buah untuk makan malam hari ini agar semakin meriah!Berikut cara membuat chocolate molten cake telur asin.</item>
+        <item>Biasanya kita mengenal roti cane sebagai salah satu komponen penting dalam kuliner Aceh. Dicocol dengan kuah kari kambing rasanya selangit, bawaannya ingin tambah terus! Kali ini, bagaimana kalau roti cane kita padukan dengan es krim. Tekstur khas dan smoky jenis roti ini tentu lezat bila dipadukan sebagai dessert!Satu kabar baik untuk kamu yang penasaran. Bahan-bahan yang dibutuhkan sederhana dan mudah ditemukan di rumah. Cukup menyiapkan roti siap pakai, pisang, kental manis, dan tentu saja es krim Wall’s Oreo Cookies dan Cream Chocolate. Rasa manis dan segarnya es krim, berpadu dengan kenyal dan lembutnya roti serta pisang, pasti bisa bikin keluarga di rumah makin happy!Tunggu apa lagi? Yuk, intip cara membuatnya di bawah ini!</item>
+        <item>Tidak terasa sebentar lagi kita akan berjumpa dengan hari raya yang dinanti-nantikan oleh semua orang – Idul Adha! Salah satu resep unggulan yang perlu dicoba semua orang di rumah adalah satai pentul kambing. Satu hidangan yang cocok dinikmati bersama keluarga ataupun sebagai hadiah berbagi yang terbaik untuk yang membutuhkan.Meski daging kambing sudah mewarnai keseharian warga Indonesia, tetap saja Idul Adha menjadi momen simbolis dimana daging kambing adalah yang terbaik di antara semuanya. Semua orang berlomba-lomba berbagi yang terbaik dengan keluarga, tetangga, serta yang membutuhkan. Belakangan, cara berbagi juga semakin penuh makna. Misalnya saja daripada berbagi daging kurban mentah, semakin banyak juga yang berbagi masakan lezat untuk semua.Kalau itu yang menjadi rencana keluarga kita di tahun ini, maka cobalah resep sedap yang satu ini. Perpaduan daging dan lemak kambing yang lembut telah meresap dengan bumbu dan Bango Kecap Manis. Dibakar hingga matang sempurna dan tersaji dengan sambal kecap. Sungguh tidak mungkin terlupakan kelezatannya!Ayo, jangan lewatkan momen yang langka ini dengan mempersembahkan yang terbaik. Selamat memasak!</item>
+        <item>Bahkan untuk urusan nasi goreng saja, Indonesia memang punya segudang variasi. Dari nasi goreng Jawa yang klasik, nasi goreng gila, hingga nasi goreng seafood yang jadi favorit. Kali ini, aku ingin berbagi resep nasi goreng pedas yang menggunakan Saus Sambal Jawara Hot. Selain mudah membuatnya, resep yang satu ini dipenuhi topping yang menarik!Topping pertama yang paling populer tentunya adalah daging ayam. Agar rendah lemak, kamu bisa menggunakan filet dada ayam. Lain waktu, boleh juga menggunakan bagian paha ayam agar rasanya semakin gurih dan dagingnya lebih empuk. Pastikan untuk menambahkan sayuran dan di resep nasi goreng pedas ini, aku menggunakan sawi hijau. Lalu, jangan lupa tambahkan bakso sapi yang diiris beserta sedikit ebi agar lebih gurih.Satu tambahan terakhir yang tak kalah wajibnya adalah telur mata sapi. Tersaji mentereng, kehadirannya pasti menggugah selera. Yuk, kita segera siapkan bahan-bahannya dan mulai memasak!</item>
     </string-array>
 </resources>
